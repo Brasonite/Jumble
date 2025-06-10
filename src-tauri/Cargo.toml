@@ -1,0 +1,22 @@
+[package]
+name = "jumble"
+version = "1.0.0"
+description = "App to jumble words in sentences."
+authors = ["Brasonite"]
+edition = "2024"
+
+[lib]
+name = "jumble_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+fastrand = "2.3.0"
+nom = "8.0.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+tauri-plugin-os = "2"
